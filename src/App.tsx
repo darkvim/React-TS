@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import { IPost } from './type/IPost'
-import { Form } from './component/Form'
-import { Hr } from './component/UI/Hr'
+import { useState } from 'react'
 import { SearchSection } from './component/SearchSection'
 import { SortedSection } from './component/SortedSection'
+import { Hr } from './component/UI/Hr'
+import { Modal } from './component/UI/modal/Modal'
+import { IPost } from './type/IPost'
+import { Form } from './component/Form'
 
 export default function App() {
 	const [posts, setPosts] = useState<IPost[]>([
@@ -12,21 +13,8 @@ export default function App() {
 		{ id: 3, title: 'бб', body: 'гг', image: null },
 	])
 
-	const [post, setPost] = useState<IPost>({
-		id: Date.now(),
-		title: '',
-		body: '',
-		image: null,
-	})
-
 	const [searchQuery, setSearchQuery] = useState<string>('')
 	const [sortField, setSortField] = useState<keyof IPost>('title')
-
-	const addNewPost = (event: React.FormEvent<HTMLFormElement>) => {
-		event.preventDefault()
-		setPosts(prev => [...prev, post])
-		setPost({ id: Date.now(), title: '', body: '' })
-	}
 
 	return (
 		<main>
@@ -37,7 +25,7 @@ export default function App() {
 
 			<Hr />
 
-			<Form addNewPost={addNewPost} setPost={setPost} post={post} />
+			<Modal children={<Form setPosts={setPosts} />} />
 
 			<SortedSection
 				posts={posts}

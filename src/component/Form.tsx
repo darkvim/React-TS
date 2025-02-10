@@ -1,6 +1,21 @@
+import { useState } from 'react'
 import { IForm } from '../type/IForm'
+import { IPost } from '../type/IPost'
 
-export const Form:React.FC<IForm> = ({ addNewPost, setPost, post }) => {
+export const Form: React.FC<IForm> = ({ setPosts }) => {
+	const [post, setPost] = useState<IPost>({
+		id: Date.now(),
+		title: '',
+		body: '',
+		image: null,
+	})
+
+	const addNewPost = (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault()
+		setPosts(prev => [...prev, post])
+		setPost({ id: Date.now(), title: '', body: '', image: null })
+	}
+
 	return (
 		<form onSubmit={addNewPost}>
 			<input

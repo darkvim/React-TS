@@ -24,7 +24,7 @@ export const SortedSection: React.FC<ISortedSection> = ({
 			return sortedPosts.filter(post =>
 				post.title.toLowerCase().includes(searchQuery)
 			)
-		else return
+		else return []
 	}, [searchQuery, posts])
 
 	return (
@@ -34,7 +34,11 @@ export const SortedSection: React.FC<ISortedSection> = ({
 				sortedPosts={sortedAndSearchedPosts}
 				showNotFoundMessage={false}
 			/>
-			<SortedPosts removePost={removePost} showNotFoundMessage sortedPosts={sortedPosts} />
+			<SortedPosts
+				removePost={removePost}
+				showNotFoundMessage
+				sortedPosts={sortedPosts}
+			/>
 		</section>
 	)
 }

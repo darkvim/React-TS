@@ -4,3 +4,11 @@ export interface IPost {
 	body: string
 	image?: File | null
 }
+
+export type PostObject = {
+	post: IPost
+}
+
+export interface IRemovePostFunc {
+	removePost: (post: IPost) => void
+}
