@@ -7,6 +7,7 @@ export interface IPost {
 
 export type PostObject = {
 	post: IPost
+	stackPosts?: boolean
 }
 
 export interface IRemovePostFunc {

@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { SortedPosts } from './SortedPosts'
 import { IPost } from '../../type/IPost'
 import { ISortedSection } from '../../type/ISortedSection'
@@ -29,11 +29,14 @@ export const SortedSection: React.FC<ISortedSection> = ({
 
 	return (
 		<section>
-			<SortedPosts
-				removePost={removePost}
-				sortedPosts={sortedAndSearchedPosts}
-				showNotFoundMessage={false}
-			/>
+			{sortedAndSearchedPosts.length !== 0 ? (
+				<SortedPosts
+					removePost={removePost}
+					sortedPosts={sortedAndSearchedPosts}
+					showNotFoundMessage={false}
+				/>
+			) : null}
+
 			<SortedPosts
 				removePost={removePost}
 				showNotFoundMessage

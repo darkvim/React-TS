@@ -1,7 +1,7 @@
-import { IInput } from '../type/IInput'
-import { ISelect } from '../type/ISelect'
+import { IInput } from '../../type/IInput'
+import { ISelect } from '../../type/ISelect'
+import { Input } from '../UI/input/Input'
 import { Select } from './Select'
-import { Input } from './UI/Input'
 
 export const SearchSection: React.FC<ISelect & IInput> = ({
 	setSortField,
@@ -17,7 +17,7 @@ export const SearchSection: React.FC<ISelect & IInput> = ({
 				]}
 			/>
 
-			<Input setSearchQuery={setSearchQuery} />
+			<Input placeholder='Search' setSearchQuery={setSearchQuery} />
 		</section>
 	)
 }

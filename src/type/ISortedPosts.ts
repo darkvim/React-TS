@@ -4,4 +4,5 @@ export interface ISortedPosts {
 	sortedPosts: IPost[]
 	removePost: (post: IPost) => void
 	showNotFoundMessage?: boolean
+	stack?: boolean
 }

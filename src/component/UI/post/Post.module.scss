@@ -1,0 +1,13 @@
+@use '../../../styles/_postMixins.scss' as *;
+
+.postList {
+	@include post-styles;
+	border: 1px solid rgb(155, 0, 155);
+	padding: 6px 8px;
+}
+
+
+.postStack {
+	width: max-content;
+	height: max-content;
+}

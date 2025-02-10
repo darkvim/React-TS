@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { IForm } from '../type/IForm'
-import { IPost } from '../type/IPost'
+import { IPost } from '../../type/IPost'
+import { IForm } from '../../type/IForm'
+import { Input } from '../UI/input/Input'
 
 export const Form: React.FC<IForm> = ({ setPosts, setVisible }) => {
 	const [post, setPost] = useState<IPost>({
@@ -19,26 +20,23 @@ export const Form: React.FC<IForm> = ({ setPosts, setVisible }) => {
 
 	return (
 		<form onSubmit={addNewPost}>
-			<input
-				value={post.title}
+			<Input
 				onChange={e => setPost({ ...post, title: e.target.value })}
+				value={post.title}
 				type='text'
-				name='title'
-				id='title'
 			/>
-			<input
-				value={post.body}
+
+			<Input
 				onChange={e => setPost({ ...post, body: e.target.value })}
+				value={post.body}
 				type='text'
-				name='body'
-				id='body'
 			/>
-			<input
+
+			<Input
 				onChange={e => setPost({ ...post, image: e.target.files?.[0] })}
 				type='file'
-				name='file'
-				id='file'
 			/>
+
 			<button type='submit'>Submit</button>
 		</form>
 	)

@@ -1,0 +1,28 @@
+$primary-color: rgb(243, 24, 255);
+$secondary-color: rgba(226, 255, 213, 0.7);
+
+$button-padding-vertical: 8px;
+$button-padding-horinzontal: 12px;
+$button-border: none;
+$button-font-weight: bold;
+$button-color: white;
+$button-font-size: 16px;
+
+$image-default-width: 80px;
+$image-default-height: 80px;
+$image-default-border-radius: 8px;
+
+$image-max-width-content: 200px;
+$image-max-height-content: 250px;
+$image-min-width-content: 200px;
+$image-min-height-content: 100px;
+
+$default-border-radius: 10px;
+
+$input-border: 1px solid $primary-color;
+$input-background-color: transparent;
+$input-box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1),
+	-1px -1px 1px rgba(0, 0, 0, 0.1);
+$input-padding: 6px 16px;
+$input-default-margin: 0 10px;
+$input-font-size: 18px;

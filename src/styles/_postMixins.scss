@@ -1,0 +1,58 @@
+@use './variables.scss' as *;
+
+@mixin post-styles {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 24px;
+	width: 700px;
+	color: white;
+	border-radius: 12px;
+	margin: 10px 0;
+
+
+	div:nth-child(2) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		width: 80%;
+		height: 100px;
+
+		h3 {
+			max-width: 150px;
+			font-weight: normal;
+			max-height: 80px;
+			width: 20%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			line-height: 1.4;
+		}
+		p {
+			max-width: 300px;
+			max-height: 100px;
+			line-height: 1.5;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			hyphens: none;
+			white-space: pre-wrap;
+			font-size: 14px;
+			margin: 10px;
+		}
+
+		button {
+			margin-left: auto;
+			padding: 4px 8px;
+			background-color: black;
+			color: white;
+			border-radius: $default-border-radius;
+			border: 1px solid $primary-color;
+			transition: background-color 0.2s ease-in;
+		}
+
+		button:hover {
+			background-color: $primary-color;
+			cursor: pointer;
+		}
+	}
+}

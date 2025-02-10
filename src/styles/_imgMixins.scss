@@ -1,0 +1,17 @@
+@use './variables.scss' as *;
+
+@mixin img-list-styles {
+	border-radius: $image-default-border-radius;
+	width: $image-default-width;
+	height: $image-default-height;
+}
+
+@mixin img-stack-styles {
+	max-width: $image-max-width-content;
+	min-width: $image-min-width-content;
+
+	max-height: $image-max-height-content;
+	min-height: $image-min-height-content;
+
+	border-radius: 4px;
+}
