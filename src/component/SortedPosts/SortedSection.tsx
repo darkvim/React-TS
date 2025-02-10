@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { SortedPosts } from './SortedPosts'
-import { ISortedSection } from '../type/ISortedSection'
-import { IPost } from '../type/IPost'
+import { IPost } from '../../type/IPost'
+import { ISortedSection } from '../../type/ISortedSection'
 
 export const SortedSection: React.FC<ISortedSection> = ({
 	posts,

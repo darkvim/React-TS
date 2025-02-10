@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { IForm } from '../type/IForm'
 import { IPost } from '../type/IPost'
 
-export const Form: React.FC<IForm> = ({ setPosts }) => {
+export const Form: React.FC<IForm> = ({ setPosts, setVisible }) => {
 	const [post, setPost] = useState<IPost>({
 		id: Date.now(),
 		title: '',
@@ -14,6 +14,7 @@ export const Form: React.FC<IForm> = ({ setPosts }) => {
 		event.preventDefault()
 		setPosts(prev => [...prev, post])
 		setPost({ id: Date.now(), title: '', body: '', image: null })
+		setVisible(false)
 	}
 
 	return (

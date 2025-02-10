@@ -2,10 +2,18 @@ import { IModal } from '../../../type/IModal'
 
 import styles from './Modal.module.scss'
 
-export const Modal: React.FC<IModal> = ({ children }) => {
+export const Modal: React.FC<IModal> = ({ children, visible, setVisible }) => {
+	const rootClasses = [styles.modal]
+	if (visible) rootClasses.push(styles.active)
+
 	return (
-		<div className={styles.modal}>
-			<div className={styles.modalContent}>{children}</div>
+		<div onClick={() => setVisible(false)} className={rootClasses.join(' ')}>
+			<div
+				onClick={event => event.stopPropagation()}
+				className={styles.modalContent}
+			>
+				{children}
+			</div>
 		</div>
 	)
 }
