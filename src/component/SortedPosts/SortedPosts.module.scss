@@ -1,5 +1,7 @@
 @use '../../styles/variables.scss' as *;
 
+@use '../../styles/liMixins.scss' as *;
+
 .ulList {
 	display: flex;
 	flex-wrap: wrap;
@@ -14,16 +16,10 @@
 }
 
 .ulStack {
-	columns: 10;
-	padding: 8px 20px;
+	columns: 9;
 	overflow: hidden;
-	gap: 200px;
 
 	li {
-		margin: 4px;
-		width: max-content;
-		height: max-content;
-		border: 1px solid $secondary-color;
-		border-radius: 4px;
+		@include li-styles;
 	}
 }

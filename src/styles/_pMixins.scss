@@ -1,0 +1,14 @@
+@use './variables.scss' as *;
+
+
+@mixin p-styles {
+	max-width: 300px;
+			max-height: 100px;
+			line-height: 1.5;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			hyphens: none;
+			white-space: pre-wrap;
+			font-size: 14px;
+			margin: 10px;
+}
