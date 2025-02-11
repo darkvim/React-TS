@@ -1,7 +1,7 @@
-import { useMemo, useState } from 'react'
-import { SortedPosts } from './SortedPosts'
+import { useEffect, useMemo } from 'react'
 import { IPost } from '../../type/IPost'
 import { ISortedSection } from '../../type/ISortedSection'
+import { SortedPosts } from './SortedPosts'
 
 export const SortedSection: React.FC<ISortedSection> = ({
 	posts,
@@ -12,7 +12,6 @@ export const SortedSection: React.FC<ISortedSection> = ({
 	const removePost = (post: IPost) => {
 		setPosts(posts.filter(p => p.id !== post.id))
 	}
-
 	const sortedPosts = useMemo(() => {
 		return [...posts].sort((first, second) =>
 			String(first[sortField]).localeCompare(String(second[sortField]))

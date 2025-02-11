@@ -13,8 +13,11 @@ export const SortedPosts: React.FC<ISortedPosts> = ({
 }) => {
 	const [stackPosts, setStackPosts] = useState<boolean>(true)
 
-	const ulStack = styles.ulStack;
-	const ulList = styles.ulList;
+	const ulStack = styles.ulStack
+	const ulList = styles.ulList
+
+	const postList = styles.postList
+	const postStack = styles.postStack
 
 	return (
 		<>
@@ -26,6 +29,7 @@ export const SortedPosts: React.FC<ISortedPosts> = ({
 				{sortedPosts && sortedPosts.length !== 0 ? (
 					sortedPosts.map(post => (
 						<motion.li
+							className={stackPosts ? postStack : postList}
 							key={post.id}
 							initial={{ opacity: 0, y: 10 }}
 							animate={{ opacity: 1, y: 0 }}

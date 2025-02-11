@@ -9,9 +9,9 @@
 @mixin img-stack-styles {
 	max-width: $image-max-width-content;
 	min-width: $image-min-width-content;
-
-	// max-height: $image-max-height-content;
+	max-height: $image-max-height-content;
 	min-height: $image-min-height-content;
+	width: 300px;
 
 	border-radius: 4px;
 }

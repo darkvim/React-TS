@@ -1,15 +1,17 @@
 @use './variables.scss' as *;
 
 @mixin li-styles {
-	margin: 4px;
-	width: max-content;
-	height: max-content;
 	border: 1px solid transparent;
+	border-radius: 5px;
 
+	max-width: max-content;
+	min-width: min-content;
+	max-height:max-content;
+	min-height: min-content;
 
 	&:hover {
 		cursor: pointer;
-		filter: brightness(0.75);
+		filter: brightness(0.8);
 		border: 1px solid $third-color;
 	}
 }

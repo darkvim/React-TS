@@ -1,13 +1,10 @@
 import { useEffect, useState } from 'react'
+import { IImavePreview } from '../../../type/IImagePreview'
 
 import styles from './ImagePreview.module.scss'
-import { IImavePreview } from '../../../type/IImagePreview'
 
 export const ImagePreview: React.FC<IImavePreview> = ({ file, stackPosts }) => {
 	const [preview, setPreview] = useState<string | null>(null)
-
-	const imageList = styles.imageList
-	const imageStack = styles.imageStack
 
 	useEffect(() => {
 		if (!file) return
@@ -18,12 +15,12 @@ export const ImagePreview: React.FC<IImavePreview> = ({ file, stackPosts }) => {
 		return () => URL.revokeObjectURL(objectUrl)
 	}, [file])
 
-	if (!file) return null
+	if (!preview) return null
 
 	return (
 		<img
-			className={stackPosts ? imageStack : imageList}
-			src={preview!}
+			className={stackPosts ? styles.imageStack : styles.imageList}
+			src={preview}
 			alt='icon'
 		/>
 	)

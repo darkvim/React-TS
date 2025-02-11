@@ -1,6 +1,7 @@
 @use '../../styles/variables.scss' as *;
 
 @use '../../styles/liMixins.scss' as *;
+@use '../../styles/_postMixins.scss' as *;
 
 .ulList {
 	display: flex;
@@ -18,8 +19,25 @@
 .ulStack {
 	columns: 9;
 	overflow: hidden;
-
+	padding: 24px;
+	margin: auto;
+	
 	li {
 		@include li-styles;
 	}
+}
+
+.postList {
+	@include post-styles;
+	border: 1px solid rgb(155, 0, 155);
+	padding: 6px 8px;
+}
+
+.postStack {
+	// width: max-content;
+	// height: max-content;
+
+	overflow: hidden;
+	max-width: 300px;
+	max-height: 200px;
 }

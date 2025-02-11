@@ -8,11 +8,8 @@ export const Post: React.FC<PostObject & IRemovePostFunc> = ({
 	removePost,
 	stackPosts,
 }) => {
-	const postList = styles.postList
-	const postStack = styles.postStack
-
 	return (
-		<div className={stackPosts ? postStack : postList} key={post.id}>
+		<>
 			{stackPosts ? (
 				<ImagePreview stackPosts={stackPosts} file={post.image} />
 			) : (
@@ -25,6 +22,6 @@ export const Post: React.FC<PostObject & IRemovePostFunc> = ({
 					</div>
 				</>
 			)}
-		</div>
+		</>
 	)
 }
