@@ -1,0 +1,43 @@
+@use '../../../styles/variables.scss' as *;
+
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex: 1 1 50%;
+	gap: 24px;
+	min-height: 600px;
+	margin: auto;
+
+	& > div {
+		margin-right: auto;
+		margin-left: 40px;
+	}
+
+	label {
+		display: flex;
+		width: 100%;
+		padding: 4px 8px;
+		border-radius: 16px;
+		cursor: pointer;
+		font-size: clamp(0.8rem, 1.2vw, 1.4rem);
+		border: 1px solid $secondary-color !important;
+	}
+
+	label:hover {
+		border: 1px solid $primary-color !important;
+		background-color: $primary-color;
+	}
+
+	button {
+		border: 3px solid $secondary-color;
+		margin-left: auto;
+		transition: background-color 0.15s ease-in;
+	}
+
+	button:hover {
+		border: 3px solid $primary-color !important;
+		background-color: $primary-color;
+	}
+}

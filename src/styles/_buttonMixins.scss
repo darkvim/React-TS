@@ -1,13 +1,14 @@
 @use './variables.scss' as *;
 
 @mixin button-styles {
-	margin-left: auto;
-	padding: 4px 8px;
-	background-color: black;
+	padding: 8px 12px;
+	background-color: transparent;
 	color: white;
 	border-radius: $default-border-radius;
 	border: 1px solid $primary-color;
 	transition: background-color 0.2s ease-in;
+	font-size: clamp(0.9vw, 1vw, 1.8vw);
+	margin-top: auto;
 
 	&:hover {
 		background-color: $primary-color;

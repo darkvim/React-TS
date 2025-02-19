@@ -3,7 +3,7 @@ import { IImavePreview } from '../../../type/IImagePreview'
 
 import styles from './ImagePreview.module.scss'
 
-export const ImagePreview: React.FC<IImavePreview> = ({ file, stackPosts }) => {
+export const ImagePreview: React.FC<IImavePreview> = ({ file, stackPins }) => {
 	const [preview, setPreview] = useState<string | null>(null)
 
 	useEffect(() => {
@@ -19,7 +19,7 @@ export const ImagePreview: React.FC<IImavePreview> = ({ file, stackPosts }) => {
 
 	return (
 		<img
-			className={stackPosts ? styles.imageStack : styles.imageList}
+			className={stackPins ? styles.imageStack : styles.imageList}
 			src={preview}
 			alt='icon'
 		/>

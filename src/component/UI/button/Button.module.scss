@@ -1,0 +1,5 @@
+@use '../../../styles/buttonMixins.scss' as *;
+
+.button {
+	@include button-styles;
+}

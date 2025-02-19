@@ -1,0 +1,27 @@
+@use '../../../styles/variables.scss' as *;
+
+.inputSection {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	justify-content: center;
+	max-width: 750px;
+	border: 1px solid $primary-color;
+	border-radius: 16px;
+	padding: 4px 8px;
+	margin: 20px auto;
+
+	input {
+		color: white;
+	}
+
+	input:focus {
+		outline: none;
+	}
+
+	& > span {
+		color: white;
+		padding-left: 8px;
+		border-left: 1px solid black;
+	}
+}

@@ -1,7 +1,7 @@
 import React, { SetStateAction } from 'react'
-import { IPost } from './IPost'
+import { IPin } from './IPin'
 
 export interface IForm extends React.ComponentProps<'form'> {
-	setPosts: React.Dispatch<SetStateAction<IPost[]>>
+	setPins: React.Dispatch<SetStateAction<IPin[]>>
 	setVisible: React.Dispatch<SetStateAction<boolean>>
 }

@@ -1,0 +1,13 @@
+@use '../../../../styles/variables.scss' as *;
+
+.preview {
+	flex: 1 1 50%;
+	min-width: 500px;
+	border: 1px solid white;
+	color: white;
+	overflow-wrap: break-word;
+
+	div {
+		padding: 16px;
+	}
+}

@@ -1,4 +1,4 @@
 export interface IImavePreview {
-	stackPosts?: boolean
+	stackPins?: boolean
 	file: File | null | undefined
 }

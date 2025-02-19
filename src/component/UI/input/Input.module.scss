@@ -1,0 +1,6 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/inputMixins.scss' as *;
+
+.input {
+	@include input-styles;
+}

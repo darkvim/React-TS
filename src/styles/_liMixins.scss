@@ -1,17 +1,53 @@
 @use './variables.scss' as *;
+@use './buttonMixins.scss' as *;
+@use './h3Mixins.scss' as *;
+@use './pMixins.scss' as *;
+@use './imgMixins.scss' as *;
 
 @mixin li-styles {
 	border: 1px solid transparent;
 	border-radius: 5px;
+	margin: 10px auto;
 
 	max-width: max-content;
 	min-width: min-content;
-	max-height:max-content;
+	max-height: max-content;
 	min-height: min-content;
 
 	&:hover {
 		cursor: pointer;
-		filter: brightness(0.8);
-		border: 1px solid $third-color;
+		filter: brightness(0.7);
+		border: 1px solid rgba(255, 255, 255, 0.9);
+	}
+}
+
+@mixin li-post-list-styles {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	height: 100%;
+	margin: 10px;
+	border-radius: $default-border-radius;
+	gap: 8px;
+	width: 320px;
+
+	@media(max-width: 350px) {
+		width: 270px;
+	}
+
+	img {
+		@include img-list-styles;
+	}
+
+	p {
+		@include p-styles;
+	}
+
+	h3 {
+		@include h3-styles;
+	}
+
+	button {
+		@include button-styles;
 	}
 }
